@@ -1,10 +1,6 @@
 require_relative '../caesar_cipher'
 
-describe "caesar_cipher" do
-  before do
-    # @encrypted = caesar_cipher('test', 5)
-  end
-  
+describe "caesar_cipher" do    
   it "encrypts a single letter with a left shift of 3" do
     expect(caesar_cipher("e")).to eq("b")
   end
@@ -14,7 +10,11 @@ describe "caesar_cipher" do
     expect(caesar_cipher("y", 3)).to eq("b")
   end
 
-  # it "returns something" do 
-  #   expect(@encrypted).not_to be_nil
-  # end
+  it "should encrypt 'hello' to 'ebiil' with a left shift of 3" do
+    expect(caesar_cipher("hello")).to eq("ebiil")
+  end
+
+  it "should encrypt 'hello world' to 'mjqqt btwqi' with a right shift of 5" do
+    expect(caesar_cipher("hello world", 5)).to eq("mjqqt btwqi")
+  end
 end
