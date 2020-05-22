@@ -2,6 +2,8 @@
   The Odin Project: Caesar Cipher
   left shift (a -> z -> y) if shift is positive
   right shift (b -> c -> d) if shift is negative 
+
+  see /spec/caesar_spec.rb for tests
 =end
 def caesar_cipher(string, shift=-3)
   @shift = shift  
