@@ -8,11 +8,6 @@ def substrings(matcher, dictionary)
     @dictionary.each do |dictionary_string|    
       if match_string.include?(dictionary_string)
         @result[dictionary_string] += 1
-        # if (@result.key?(dictionary_string))
-        #   @result[dictionary_string] += 1
-        # else
-        #   @result[dictionary_string] = 1
-        # end
       end
     end
   end
