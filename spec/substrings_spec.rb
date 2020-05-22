@@ -2,7 +2,7 @@ require_relative '../substrings'
 
 describe "substrings" do  
   it "should be able to find the same word in an array" do
-    dictionary = ["below", "weather"]
+    dictionary = ["meh", "weather"]
     expect(substrings("below", dictionary)).to eq("below")
   end
 
