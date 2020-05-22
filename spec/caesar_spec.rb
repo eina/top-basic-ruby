@@ -17,4 +17,8 @@ describe "caesar_cipher" do
   it "should encrypt 'hello world' to 'mjqqt btwqi' with a right shift of 5" do
     expect(caesar_cipher("hello world", 5)).to eq("mjqqt btwqi")
   end
+
+  it "should encrypt 'What a string!' to 'Bmfy f xywnsl!' with a right shift of 5" do
+    expect(caesar_cipher("What a string!", 5)).to eq("Bmfy f xywnsl!")
+  end
 end
