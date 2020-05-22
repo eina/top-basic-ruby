@@ -5,7 +5,7 @@
 =end
 def caesar_cipher(string, shift=-3)
   @shift = shift  
-
+  
   def shift_char(char)    
     char_num = char.ord
     shifted_num = char.ord + @shift    
