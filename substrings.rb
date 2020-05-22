@@ -1,10 +1,25 @@
-def substrings(matcher, dictionary)  
-  # result = {}
-  dictionary.each_with_index do |val, idx|
-    puts matcher[val]
-    return matcher[val]
-  end
+def substrings(matcher, dictionary)
+  # create a new hash w/ 0 as the default value for all keys
+  @result = Hash.new(0)
+  matcher = matcher.downcase().split(" ") 
+  @dictionary = dictionary
 
-  # return result
+  def match_and_count(match_string)
+    @dictionary.each do |dictionary_string|    
+      if match_string.include?(dictionary_string)
+        @result[dictionary_string] += 1
+        # if (@result.key?(dictionary_string))
+        #   @result[dictionary_string] += 1
+        # else
+        #   @result[dictionary_string] = 1
+        # end
+      end
+    end
+  end
+  
+  matcher.each {|match_string| match_and_count(match_string)}
+    
+  puts @result
+  return @result
   
 end
