@@ -5,22 +5,22 @@ def caesar_cipher(string, shift=-3)
     # shift = -3, left, shift = 3, right    
 
     if(char == " ")
-      shifted_num = " "
+      shifted_char = " "
     else 
+      char_num = char.ord
       shifted_num = char.ord + @shift    
-      if(shifted_num < 97)      
-        distance_from_a = 97 - shifted_num
-        shifted_num = 123 - distance_from_a
-      end 
 
-      if(shifted_num > 122)      
-        distance_from_z = 122 - shifted_num
-        shifted_num = 96 + distance_from_z.abs()
-      end 
+      # within 'a' && 'z'
+      if(char_num >= 97 && char_num <=122)
+        shifted_num = ((shifted_num - 97) % 26) + 97
+        # shifted_num = ((char_num - 97 + @shift) % 26) + 97
+      end      
+
+      shifted_char = shifted_num.chr
     end
         
 
-    shifted_num.chr
+    shifted_char
   end
   
   shifted_string = string.chars.map { |char| shift_char(char) }  
