@@ -15,7 +15,7 @@ def stock_picker(stonks)
     end
   end
   
-  # if result is empty, it means there were no good days to buy
+  # if result is empty, it means there were no good days to sell
   result.size == 0 ? "Sorry, looks like you should hold on to those stocks a little longer" : result  
 
 end
