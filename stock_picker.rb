@@ -7,10 +7,9 @@ def stock_picker(stonks)
       profit = next_days_stonk - stonk      
       if profit > sum
         sum = profit        
-        # add two: +1 for 0 index and +1 for starting at stonks's 2nd element
+        # add two to get true index: +1 for 0 index and +1 for starting at stonks's 2nd element
         result = [idx, next_idx + 2]      
-      end
-      # puts "idx: #{idx}, next day index: #{next_idx + 2}"
+      end      
       puts "tomorrow: #{next_days_stonk} - today: #{stonk} = #{next_days_stonk - stonk}"
     end
   end
